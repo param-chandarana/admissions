@@ -1,9 +1,0 @@
-[21:22:45 2024-07-28] FETCHING Version 2.36.15
-[21:22:45 2024-07-28] CREATING /Users/param/.spicetify
-[21:22:45 2024-07-28] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.36.15/spicetify-2.36.15-darwin-arm64.tar.gz
-[21:22:50 2024-07-28] EXTRACTING /Users/param/.spicetify/spicetify.tar.gz
-[21:22:50 2024-07-28] SETTING EXECUTABLE PERMISSIONS TO /Users/param/.spicetify/spicetify
-[21:22:50 2024-07-28] REMOVING /Users/param/.spicetify/spicetify.tar.gz
-[21:22:50 2024-07-28] APPENDING /Users/param/.spicetify to PATH in /Users/param/.zshrc
-[21:22:50 2024-07-28] spicetify v2.36.15 was installed successfully to /Users/param/.spicetify
-[21:22:50 2024-07-28] Run 'spicetify --help' to get started
