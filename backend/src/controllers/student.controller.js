@@ -16,6 +16,7 @@ export const getPaginatedStudents = async (req, res) => {
   const PAGE_SIZE = 10;
   const page = parseInt(req.query.page || "0");
 
+  console.log("Query: ", req.query);
 
   const filterQuery = {};
   if (req.query.countryName) {
@@ -138,7 +139,6 @@ export const downloadExcel = async (req, res) => {
   console.log("request: ", req.query);
   const filterQuery = {};
   
-
   if (req.query.countryName) {
     filterQuery.countryName = { $in: req.query.countryName.split(",") };
   }
@@ -147,6 +147,7 @@ export const downloadExcel = async (req, res) => {
     filterQuery.qualification = { $in: qualifications };
   }
   if (req.query.courseOfStudy) {
+    console.log(req.query.courseOfStudy.split(","));
     filterQuery.courseOfStudy = { $in: req.query.courseOfStudy.split(",") };
   }
   if (req.query.duration) {

@@ -227,7 +227,15 @@ const StudentDetails = () => {
 
   // aane as component kri leje
   const handleDownload = () => {
-    const filterData = filters;
+    const filterParams = {
+      page: pageNumber,
+      countryName: filters.countryName.join(","),
+      qualification: filters.qualification.join(","),
+      courseOfStudy: filters.courseOfStudy.join(","),
+      duration: filters.duration.join(","),
+      academicYear: filters.academicYear.join(","),
+      search: searchQuery,
+    };
 
     if (filteredCount === 0) {
       toast.info("No data to download");
@@ -237,7 +245,7 @@ const StudentDetails = () => {
     axios({
       url: '/api/students/download-excel', // Adjust the URL to your API endpoint
       method: 'GET',
-      params: filterData,
+      params: filterParams,
       responseType: 'blob' // Important for handling binary data
     }).then((response) => {
       const url = window.URL.createObjectURL(new Blob([response.data]));
