@@ -28,8 +28,13 @@ app.use("/api/users", userRouter);
 app.use("/api/pdf", pdfRouter);
 app.use("/api/last-id", lastIdRouter);
 
-app.get("/", (req, res) => {
-  res.send("Server is ready");
+// app.get("/", (req, res) => {
+//   res.send("Server is ready");
+// });
+
+app.use(express.static("./build"));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 
 app.use(notFound);
