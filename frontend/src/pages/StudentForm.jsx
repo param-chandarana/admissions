@@ -208,7 +208,6 @@ const StudentForm = ({ isEditMode }) => {
   };
 
   const getUniqueQualifications = () => {
-    console.log(courses);
     setUniqueQualifications([
       ...new Set(courses.map((course) => course.qualification)),
     ]);
@@ -269,8 +268,7 @@ const StudentForm = ({ isEditMode }) => {
       }
     } else {
       try {
-        const response = await axios.post(`/api/students/add`, trimmedStudentData);
-        // console.log(response.data);
+        await axios.post(`/api/students/add`, trimmedStudentData);
 
         await axios.put(`/api/last-id/update`, {
           lastStudentId: newId,

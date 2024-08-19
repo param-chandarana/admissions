@@ -16,8 +16,6 @@ export const getPaginatedStudents = async (req, res) => {
   const PAGE_SIZE = 10;
   const page = parseInt(req.query.page || "0");
 
-  console.log("Query: ", req.query);
-
   const filterQuery = {};
   if (req.query.countryName) {
     filterQuery.countryName = { $in: req.query.countryName.split(",") };
@@ -38,7 +36,6 @@ export const getPaginatedStudents = async (req, res) => {
     filterQuery.studentId = { $regex: academicYearPattern };
   }
   if (req.query.search) {
-    console.log(req.query.search)
     filterQuery.studentName = { $regex: new RegExp(req.query.search, 'i') };
   }
 
@@ -136,7 +133,6 @@ export const getHighestStudentId = async (req, res) => {
 
 // Function to handle the request for downloading the student data as an Excel file
 export const downloadExcel = async (req, res) => {
-  console.log("request: ", req.query);
   const filterQuery = {};
   
   if (req.query.countryName) {
@@ -147,7 +143,6 @@ export const downloadExcel = async (req, res) => {
     filterQuery.qualification = { $in: qualifications };
   }
   if (req.query.courseOfStudy) {
-    console.log(req.query.courseOfStudy.split(","));
     filterQuery.courseOfStudy = { $in: req.query.courseOfStudy.split(",") };
   }
   if (req.query.duration) {
@@ -163,7 +158,6 @@ export const downloadExcel = async (req, res) => {
 
   try {
     const students = await Student.find(filterQuery);
-    console.log("filtered data: ", filterQuery);
 
     const studentData = students.map((student) => {
       return {

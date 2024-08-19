@@ -82,9 +82,6 @@ const CourseForm = ({ isEditMode }) => {
     const MUPresidentsSpecialScholarship = parseFloat(trimmedCourseData.MUPresidentsSpecialScholarship);
     const totalScholarships = specialScholarshipFromInstitute + MUPresidentsSpecialScholarship;
 
-    console.log("Total Annual Fees:", totalAnnualFees);
-    console.log("Total Scholarships:", totalScholarships);
-
     if (totalScholarships > totalAnnualFees) {
       toast.error("Total scholarships cannot be greater than total fees");
       return;
