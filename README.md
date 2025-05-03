@@ -64,7 +64,7 @@ PORT=8000
 CORS_ORIGIN=your_frontend_url
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-NODE_ENV=production
+NODE_ENV=development/production
 ```
 
 Change your database name in the `constants.js` file:
