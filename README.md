@@ -67,7 +67,7 @@ JWT_SECRET=your_jwt_secret
 NODE_ENV=development/production
 ```
 
-Change your database name in the `constants.js` file:
+Add your database name in the `constants.js` file.
 
 #### 3. Frontend Setup
 
@@ -116,21 +116,20 @@ The frontend will run at `http://localhost:3000` and connect to the backend serv
 - Add/edit/delete functionality for both modules
 - PDF download button for each student record
 
-## Authentication
-
-This project includes basic authentication for admin access.
-
-**Login Credentials (Default):**
-```txt
-Email:    admin@email.com
-Password: admin
-```
-
 ## Future Enhancements
 
 - Role-based authentication (admin, staff, etc.)
 - Email integration to send offer letters
 - Activity logs and audit trails
+
+## Login Credentials
+
+For accessing the deployed version of the application, use the following credentials:
+
+- **Email**: `admin@email.com`
+- **Password**: `admin`
+
+**Note**: These credentials are for the demo purpose and may be changed in a production environment.
 
 ---
 
