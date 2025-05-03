@@ -1,31 +1,31 @@
 
-# 🎓 MERN Stack Admissions Management System
+# MERN Stack Admissions Management and Offer Letter Generation System
 
 A full-stack **MERN (MongoDB, Express.js, React, Node.js)** web application designed to manage student admissions and generate offer letters in dynamic PDF format.
 
-## ✨ Key Features
+## Key Features
 
-### 🧑‍🎓 Student Management
+### Student Management
 - Add new student records with academic and personal details
 - View all students in a table with **search and filter options**
 - Download **automatically generated PDF offer letters** with populated student data using `react-pdf`
 
-### 📚 Course Management
+### Course Management
 - Add and manage multiple course offerings
 - View courses with **filtering capabilities** for easier navigation
 
-### 📄 Offer Letter Generation
+### Offer Letter Generation
 - Each student has a downloadable **Offer Letter in PDF**
 - PDF uses a predefined **offer letter format** with live student data populated dynamically
 - Styled and rendered using **`@react-pdf/renderer`**
 
-### 🔒 Authentication
+### Authentication
 - Simple admin login system
 - **Default credentials**:
   - Email: `admin@email.com`
   - Password: `admin`
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer         | Technology           |
 |---------------|----------------------|
@@ -35,13 +35,13 @@ A full-stack **MERN (MongoDB, Express.js, React, Node.js)** web application desi
 | Database      | MongoDB              |
 | Authentication| JWT                  |
 
-## 🚀 Getting Started
+## Getting Started
 
-### 🔧 Prerequisites
+### Prerequisites
 - Node.js & npm
 - MongoDB (local or cloud instance)
 
-### 🔄 Installation
+### Installation
 
 #### 1. Clone the repository
 
@@ -110,14 +110,13 @@ The frontend will run at `http://localhost:3000` and connect to the backend serv
 └── README.md
 ```
 
-## 📦 Features in Detail
+## Features in Detail
 
-- 🗂 Filter and search students/courses
-- 📝 Add/edit/delete functionality for both modules
-- 📥 PDF download button for each student record
-- 📈 Designed for scalability and real-world admissions use cases
+- Filter and search students/courses
+- Add/edit/delete functionality for both modules
+- PDF download button for each student record
 
-## 🔐 Authentication
+## Authentication
 
 This project includes basic authentication for admin access.
 
@@ -127,7 +126,7 @@ Email:    admin@email.com
 Password: admin
 ```
 
-## 🧩 Future Enhancements
+## Future Enhancements
 
 - Role-based authentication (admin, staff, etc.)
 - Email integration to send offer letters
@@ -135,4 +134,4 @@ Password: admin
 
 ---
 
-📬 *Built for institutions to simplify the student admission process with automation and clarity.*
+*Built for institutions to simplify the student admission process with automation and clarity.*
